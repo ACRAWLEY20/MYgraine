@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		3E81390824B4FA9A00CB8779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81390724B4FA9A00CB8779 /* AppDelegate.swift */; };
 		3E81390A24B4FA9A00CB8779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81390924B4FA9A00CB8779 /* SceneDelegate.swift */; };
-		3E81390C24B4FA9A00CB8779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81390B24B4FA9A00CB8779 /* ViewController.swift */; };
+		3E81390C24B4FA9A00CB8779 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81390B24B4FA9A00CB8779 /* CalendarViewController.swift */; };
 		3E81390F24B4FA9A00CB8779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E81390D24B4FA9A00CB8779 /* Main.storyboard */; };
 		3E81391124B4FA9D00CB8779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E81391024B4FA9D00CB8779 /* Assets.xcassets */; };
 		3E81391424B4FA9D00CB8779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E81391224B4FA9D00CB8779 /* LaunchScreen.storyboard */; };
+		3E81392224B4FD9D00CB8779 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81392124B4FD9D00CB8779 /* LoginViewController.swift */; };
+		3E81392424B4FDAA00CB8779 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81392324B4FDAA00CB8779 /* RegisterViewController.swift */; };
+		3E81392624B4FDBB00CB8779 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81392524B4FDBB00CB8779 /* ProfileViewController.swift */; };
+		3E81392824B4FDD900CB8779 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81392724B4FDD900CB8779 /* MedicineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E81390424B4FA9A00CB8779 /* MYgraine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYgraine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E81390724B4FA9A00CB8779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E81390924B4FA9A00CB8779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3E81390B24B4FA9A00CB8779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E81390B24B4FA9A00CB8779 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3E81390E24B4FA9A00CB8779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E81391024B4FA9D00CB8779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E81391324B4FA9D00CB8779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E81391524B4FA9D00CB8779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E81392124B4FD9D00CB8779 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3E81392324B4FDAA00CB8779 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3E81392524B4FDBB00CB8779 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3E81392724B4FDD900CB8779 /* MedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		3E81390624B4FA9A00CB8779 /* MYgraine */ = {
 			isa = PBXGroup;
 			children = (
-				3E81390724B4FA9A00CB8779 /* AppDelegate.swift */,
-				3E81390924B4FA9A00CB8779 /* SceneDelegate.swift */,
-				3E81390B24B4FA9A00CB8779 /* ViewController.swift */,
-				3E81390D24B4FA9A00CB8779 /* Main.storyboard */,
-				3E81391024B4FA9D00CB8779 /* Assets.xcassets */,
-				3E81391224B4FA9D00CB8779 /* LaunchScreen.storyboard */,
+				3E81391B24B4FC0100CB8779 /* Resources */,
+				3E81391D24B4FC1900CB8779 /* Models */,
+				3E81391C24B4FC1100CB8779 /* View Models */,
+				3E81391E24B4FC1E00CB8779 /* Views */,
+				3E81391F24B4FC2200CB8779 /* Controllers */,
 				3E81391524B4FA9D00CB8779 /* Info.plist */,
 			);
 			path = MYgraine;
+			sourceTree = "<group>";
+		};
+		3E81391B24B4FC0100CB8779 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E81390924B4FA9A00CB8779 /* SceneDelegate.swift */,
+				3E81390724B4FA9A00CB8779 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3E81391C24B4FC1100CB8779 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		3E81391D24B4FC1900CB8779 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3E81391E24B4FC1E00CB8779 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E81392024B4FC3100CB8779 /* Story Boards */,
+				3E81391024B4FA9D00CB8779 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E81391F24B4FC2200CB8779 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E81390B24B4FA9A00CB8779 /* CalendarViewController.swift */,
+				3E81392124B4FD9D00CB8779 /* LoginViewController.swift */,
+				3E81392324B4FDAA00CB8779 /* RegisterViewController.swift */,
+				3E81392524B4FDBB00CB8779 /* ProfileViewController.swift */,
+				3E81392724B4FDD900CB8779 /* MedicineViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3E81392024B4FC3100CB8779 /* Story Boards */ = {
+			isa = PBXGroup;
+			children = (
+				3E81390D24B4FA9A00CB8779 /* Main.storyboard */,
+				3E81391224B4FA9D00CB8779 /* LaunchScreen.storyboard */,
+			);
+			path = "Story Boards";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E81390C24B4FA9A00CB8779 /* ViewController.swift in Sources */,
+				3E81392624B4FDBB00CB8779 /* ProfileViewController.swift in Sources */,
+				3E81392824B4FDD900CB8779 /* MedicineViewController.swift in Sources */,
+				3E81392224B4FD9D00CB8779 /* LoginViewController.swift in Sources */,
+				3E81392424B4FDAA00CB8779 /* RegisterViewController.swift in Sources */,
+				3E81390C24B4FA9A00CB8779 /* CalendarViewController.swift in Sources */,
 				3E81390824B4FA9A00CB8779 /* AppDelegate.swift in Sources */,
 				3E81390A24B4FA9A00CB8779 /* SceneDelegate.swift in Sources */,
 			);
