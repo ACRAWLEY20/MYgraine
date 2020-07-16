@@ -17,6 +17,7 @@
 		3E81392424B4FDAA00CB8779 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81392324B4FDAA00CB8779 /* RegisterViewController.swift */; };
 		3E81392624B4FDBB00CB8779 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81392524B4FDBB00CB8779 /* ProfileViewController.swift */; };
 		3E81392824B4FDD900CB8779 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E81392724B4FDD900CB8779 /* MedicineViewController.swift */; };
+		3EF7435624C0B58E00CA9B42 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7435524C0B58D00CA9B42 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3E81392324B4FDAA00CB8779 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3E81392524B4FDBB00CB8779 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3E81392724B4FDD900CB8779 /* MedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
+		3EF7435524C0B58D00CA9B42 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				3E81390924B4FA9A00CB8779 /* SceneDelegate.swift */,
 				3E81390724B4FA9A00CB8779 /* AppDelegate.swift */,
+				3EF7435524C0B58D00CA9B42 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -110,8 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				3E81390B24B4FA9A00CB8779 /* CalendarViewController.swift */,
-				3E81392124B4FD9D00CB8779 /* LoginViewController.swift */,
-				3E81392324B4FDAA00CB8779 /* RegisterViewController.swift */,
+				3E81392A24C07CCE00CB8779 /* Login */,
 				3E81392524B4FDBB00CB8779 /* ProfileViewController.swift */,
 				3E81392724B4FDD900CB8779 /* MedicineViewController.swift */,
 			);
@@ -125,6 +127,15 @@
 				3E81391224B4FA9D00CB8779 /* LaunchScreen.storyboard */,
 			);
 			path = "Story Boards";
+			sourceTree = "<group>";
+		};
+		3E81392A24C07CCE00CB8779 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3E81392124B4FD9D00CB8779 /* LoginViewController.swift */,
+				3E81392324B4FDAA00CB8779 /* RegisterViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				3E81392624B4FDBB00CB8779 /* ProfileViewController.swift in Sources */,
 				3E81392824B4FDD900CB8779 /* MedicineViewController.swift in Sources */,
 				3E81392224B4FD9D00CB8779 /* LoginViewController.swift in Sources */,
+				3EF7435624C0B58E00CA9B42 /* Extensions.swift in Sources */,
 				3E81392424B4FDAA00CB8779 /* RegisterViewController.swift in Sources */,
 				3E81390C24B4FA9A00CB8779 /* CalendarViewController.swift in Sources */,
 				3E81390824B4FA9A00CB8779 /* AppDelegate.swift in Sources */,
