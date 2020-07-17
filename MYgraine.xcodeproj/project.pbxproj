@@ -180,6 +180,7 @@
 				3E81390124B4FA9A00CB8779 /* Frameworks */,
 				3E81390224B4FA9A00CB8779 /* Resources */,
 				29A9744145883B979EF7E3C9 /* [CP] Embed Pods Frameworks */,
+				C511D10587F290C917D9CAD7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,6 +276,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MYgraine/Pods-MYgraine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C511D10587F290C917D9CAD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MYgraine/Pods-MYgraine-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MYgraine/Pods-MYgraine-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MYgraine/Pods-MYgraine-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

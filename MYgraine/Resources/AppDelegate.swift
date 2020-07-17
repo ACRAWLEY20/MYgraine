@@ -9,9 +9,12 @@
 import UIKit
 import Firebase
 import FBSDKCoreKit
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+
+    
     
     func application(
         _ application: UIApplication,
@@ -19,10 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
           
         FirebaseApp.configure()
+        
         ApplicationDelegate.shared.application(
             application,
             didFinishLaunchingWithOptions: launchOptions
         )
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
 
         return true
     }
@@ -39,9 +46,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
+        
+        return GIDSignIn.sharedInstance().handle(url)
 
     }
-
+    
+    
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            return
+        }
+        
+        guard let authentication = user.authentication else {
+            return
+        }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        
+        guard let email = user.profile.email,
+            let first = user.profile.givenName,
+            let last = user.profile.familyName else {
+                return
+        }
+        
+        DatabaseManager.shared.validateNewUser(with: email, completion: {exists in
+            if !exists {
+                DatabaseManager.shared.insertUser(with: MYgraineAppUser(firstName: first, lastName: last, emailAddress: email))
+            }
+        })
+        
+        FirebaseAuth.Auth.auth().signIn(with: credential, completion: {authResult, error in
+            guard authResult != nil, error == nil else{
+                return
+            }
+            NotificationCenter.default.post(name: .didLogInNotification, object: nil)
+        })
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+              withError error: Error!) {
+        
+    }
+    
 }
 
     
