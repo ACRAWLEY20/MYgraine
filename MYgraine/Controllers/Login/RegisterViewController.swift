@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -90,7 +91,7 @@ class RegisterViewController: UIViewController {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "camera")
+        imageView.image = UIImage(systemName: "person.circle.fill")
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
@@ -104,11 +105,6 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         title = "Log In"
         view.backgroundColor = .white
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(didTapRegister))
         
         registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         
@@ -172,11 +168,35 @@ class RegisterViewController: UIViewController {
             password.count >= 6 else{
             return
         }
-        // Firebase Registration
+        
+        
+        // firebase registration Code
+        
+        DatabaseManager.shared.validateNewUser(with: email, completion: { [weak self] exists in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            guard !exists  else {
+                strongSelf.alerUserregisterError(message: "A user account for this email already exists.")
+                return
+            }
+            
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { [weak self] authResult, error in
+                  
+                     guard authResult != nil, error == nil else{
+                                print("Error creating user")
+                                return
+                            }
+                     DatabaseManager.shared.insertUser(with: MYgraineAppUser(firstName: first, lastName: last, emailAddress: email))
+                     strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            })
+        })
+
     }
     
-    func alerUserregisterError() {
-        let alert = UIAlertController(title: "Oops!", message: "Please enter all information to create a new account.", preferredStyle: .alert)
+    func alerUserregisterError(message: String = "Please Enter all information to create a new account.") {
+        let alert = UIAlertController(title: "Oops!", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         present(alert, animated: true)
         
